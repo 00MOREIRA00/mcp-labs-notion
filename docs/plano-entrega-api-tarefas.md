@@ -53,20 +53,22 @@ Commit sugerido: `feat: configurar base da API e health check`
 
 ## Parte 2 — Schemas e validações
 
+**Status: concluída.**
+
 Objetivo: consolidar os contratos de entrada e saída antes de acessar o banco.
 
-- [ ] Manter o enum com `pending`, `in_progress` e `completed`.
-- [ ] Criar ou ajustar o schema `TaskCreate`.
-- [ ] Criar o schema `TaskUpdate`, com todos os campos opcionais.
-- [ ] Rejeitar um `TaskUpdate` sem nenhum campo informado.
-- [ ] Criar o schema `TaskResponse`.
-- [ ] Remover espaços externos do título.
-- [ ] Validar o título normalizado entre 3 e 120 caracteres.
-- [ ] Limitar a descrição a 1000 caracteres.
-- [ ] Permitir `null` apenas para `description` durante atualizações.
-- [ ] Rejeitar campos desconhecidos em entradas.
-- [ ] Adicionar exemplos aos schemas principais.
-- [ ] Testar as validações dos schemas isoladamente ou pelas rotas.
+- [x] Manter o enum com `pending`, `in_progress` e `completed`.
+- [x] Criar ou ajustar o schema `TaskCreate`.
+- [x] Criar o schema `TaskUpdate`, com todos os campos opcionais.
+- [x] Rejeitar um `TaskUpdate` sem nenhum campo informado.
+- [x] Criar o schema `TaskResponse`.
+- [x] Remover espaços externos do título.
+- [x] Validar o título normalizado entre 3 e 120 caracteres.
+- [x] Limitar a descrição a 1000 caracteres.
+- [x] Permitir `null` apenas para `description` durante atualizações.
+- [x] Rejeitar campos desconhecidos em entradas.
+- [x] Adicionar exemplos aos schemas principais.
+- [x] Testar as validações dos schemas isoladamente ou pelas rotas.
 
 Critério de conclusão: todos os contratos da seção 5 da especificação existem
 e entradas inválidas retornam HTTP 422 sem chegar à persistência.
