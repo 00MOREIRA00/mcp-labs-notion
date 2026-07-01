@@ -10,11 +10,6 @@ router = APIRouter()
 tasks: list[TaskCreateResponse] = []
 task_id_sequence = count(start=1)
 
-@router.get("/health")
-def health_check():
-    return {"status": "running"}
-
-
 @router.post("/create", response_model=TaskCreateResponse, status_code=201, summary="Criar uma tarefa",
     description="Cria uma nova tarefa com os dados informados.")
 def create_task(data: TaskCreateRequest, response: Response) -> TaskCreateResponse:
